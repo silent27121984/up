@@ -31,11 +31,11 @@
   <string name="error_open_url">Не удалось открыть ссылку</string>
   <string name="developer_info_title">Разработчик</string>
   <string name="donate_info_title">Пожертвовать</string>
-  <string name="donate_info_summary">Поддержать разработку</string>
+  <string name="donate_info_summary">Мне на пиво)))</string>
   <string name="website_info_title">Веб-сайт</string>
-  <string name="website_info_summary">Посетить наш веб-сайт</string>
+  <string name="website_info_summary">Пост на 4PDA</string>
   <string name="news_info_title">Новости</string>
-  <string name="news_info_summary">Будьте в курсе обновлений и других новостей</string>
+  <string name="news_info_summary">Изминения от автора билда</string>
   <string name="forum_info_title">Форум</string>
   <string name="forum_info_summary">Последние сообщения на форуме</string>
   <string name="addons_title">Расширения</string>
