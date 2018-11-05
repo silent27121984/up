@@ -29,7 +29,7 @@
   <!-- Info section -->
   <string name="extras_category_title">Дополнения</string>
   <string name="error_open_url">Не удалось открыть ссылку</string>
-  <string name="developer_info_title">Разработчик</string>
+  <string name="developer_info_title">Автор сборки</string>
   <string name="donate_info_title">Пожертвовать</string>
   <string name="donate_info_summary">Мне на пиво)))</string>
   <string name="website_info_title">Веб-сайт</string>

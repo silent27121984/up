@@ -31,7 +31,7 @@
     <!-- Info section -->
     <string name="extras_category_title">Extras</string>
     <string name="error_open_url">Failed to open URL in browser</string>
-    <string name="developer_info_title">Maintainer</string>
+    <string name="developer_info_title">Build author</string>
     <string name="donate_info_title">Donate</string>
     <string name="donate_info_summary">I have a beer)))</string>
     <string name="website_info_title">Website</string>
