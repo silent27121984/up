@@ -14,7 +14,7 @@ import android.app.AlarmManager;
 
 public class Constants {
     // Download related
-    public static final String UPDATES_FOLDER = "AospExtended-Updates";
+    public static final String UPDATES_FOLDER = "AospExtended-Silent27-Updates";
     public static final String DOWNLOAD_ID = "download_id";
     public static final String DOWNLOAD_NAME = "download_name";
     public static final String DOWNLOAD_TMP_EXT = ".tmp";
@@ -33,7 +33,7 @@ public class Constants {
     public static final String CURRENT_DEVICE_NAME = "ro.aex.device";
     public static final String CURRENT_VERSION = "ro.modversion";
     public static final String CURRENT_BUILD_TYPE = "ro.extended.releasetype";
-    public static final String OTA_URL = "https://api.aospextended.com/ota/%s/%s";
+    public static final String OTA_URL = "http://pe-go.ru/ota/silent27/aex/%s";
     public static final String OTA_VERSION_CODE = "ro.extended.ota.version_code";
     // Expressions
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd-Hm";
