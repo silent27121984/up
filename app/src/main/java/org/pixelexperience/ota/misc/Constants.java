@@ -32,7 +32,7 @@ public class Constants {
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "org.pixelexperience.device";
     public static final String CURRENT_VERSION = "org.pixelexperience.version";
-    public static final String OTA_URL = "http://pe-go.ru/ota/silent27/pe/santoni/%s";
+    public static final String OTA_URL = "http://pe-go.ru/ota/silent27/pe/%s";
     public static final String OTA_VERSION_CODE = "org.pixelexperience.ota.version_code";
     // Expressions
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd-Hm";
