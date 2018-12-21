@@ -31,10 +31,10 @@
     <string name="error_open_url">Не вдалося відкрити посилання у браузері</string>
     <string name="developer_info_title">Супроводжуючий</string>
     <string name="donate_info_title">Підтримати проект</string>
-    <string name="donate_info_summary">Підтримати розробку</string>
+    <string name="donate_info_summary">Підтримати розробку версії "go"</string>
     <string name="website_info_title">Web-сайт</string>
-    <string name="website_info_summary">Відвідати наш web-сайт</string>
-    <string name="news_info_title">Новини</string>
+    <string name="website_info_summary">Пост на 4PDA</string>
+    <string name="news_info_title">Телеграм</string>
     <string name="news_info_summary">Стежте за оновленнями та іншими новинами</string>
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Подивитись повідомлення форуму</string>
