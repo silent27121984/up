@@ -35,7 +35,7 @@
     <string name="website_info_title">Веб-сайт</string>
     <string name="website_info_summary">Пост на 4PDA</string>
     <string name="news_info_title">Телеграм</string>
-    <string name="news_info_summary">Будьте в курсе об обновлениях и другие новости</string>
+    <string name="news_info_summary">Будьте в курсе обновлений и других новостей</string>
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Просмотр сообщения на форуме</string>
     <string name="addons_title">Дополнения</string>
