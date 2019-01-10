@@ -30,8 +30,8 @@
   <string name="extras_category_title">Додаткові можливості</string>
   <string name="error_open_url">Не вдалося відкрити посилання у браузері</string>
   <string name="developer_info_title">Автор збірки</string>
-  <string name="donate_info_title">Пожертвувати</string>
-  <string name="donate_info_summary">Мені на пиво)))</string>
+  <string name="donate_info_title">Підтримати проект</string>
+  <string name="donate_info_summary">Підтримати розробку версії "go"</string>
   <string name="website_info_title">Веб-сайт</string>
   <string name="website_info_summary">Пост на 4PDA</string>
   <string name="news_info_title">Телеграм</string>
