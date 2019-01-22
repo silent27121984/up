@@ -31,7 +31,8 @@
   <string name="error_open_url">Gagal membuka URL di peramban</string>
   <string name="developer_info_title">Pengelola</string>
   <string name="donate_info_title">Donasi</string>
-  <string name="donate_info_summary">Dukung pengembangan</string>
+  <string name="donate_info_summary">Mendukung pengembangan versi "go"
+</string>
   <string name="website_info_title">Situs web</string>
   <string name="website_info_summary">Kunjungi situs web kami</string>
   <string name="news_info_title">Berita</string>

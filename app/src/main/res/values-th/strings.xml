@@ -31,7 +31,7 @@
   <string name="error_open_url">ไม่สามารถเปิด URL ในเบราว์เซอร์</string>
   <string name="developer_info_title">ผู้ดูแล</string>
   <string name="donate_info_title">ร่วมสนับสนุน</string>
-  <string name="donate_info_summary">สนับสนุนการพัฒนา</string>
+  <string name="donate_info_summary">รองรับการพัฒนาเวอร์ชั่น "go"</string>
   <string name="website_info_title">เว็บไซต์</string>
   <string name="website_info_summary">เยี่ยมชมเว็บไซต์</string>
   <string name="news_info_title">โทรเลข</string>

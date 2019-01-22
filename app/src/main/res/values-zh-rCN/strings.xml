@@ -31,7 +31,7 @@
   <string name="error_open_url">打开链接失败</string>
   <string name="developer_info_title">维护者</string>
   <string name="donate_info_title">捐赠</string>
-  <string name="donate_info_summary">支持开发</string>
+  <string name="donate_info_summary">支持“go”版本的开发</string>
   <string name="website_info_title">官方网站</string>
   <string name="website_info_summary">访问我们的网站</string>
   <string name="news_info_title">電報</string>
