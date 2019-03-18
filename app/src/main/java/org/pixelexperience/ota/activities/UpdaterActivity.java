@@ -823,39 +823,6 @@ public class UpdaterActivity extends PreferenceActivity implements
         mUpdateHandler.post(mUpdateProgress);
     }
 
-    public void confirmDeleteAll() {
-        new AlertDialog.Builder(this)
-                .setTitle(R.string.confirm_delete_dialog_title)
-                .setMessage(R.string.confirm_delete_all_dialog_message)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // We are OK to delete, trigger it
-                        deleteOldUpdates();
-                        updateLayout(false);
-                    }
-                })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
-    }
-
-    private boolean deleteOldUpdates() {
-        boolean success;
-        //mUpdateFolder: Foldername with fullpath of SDCARD
-        if (mUpdateFolder.exists() && mUpdateFolder.isDirectory()) {
-            Utils.deleteDir(mUpdateFolder);
-            mUpdateFolder.mkdir();
-            success = true;
-            showToast(getString(R.string.delete_updates_success_message), Toast.LENGTH_SHORT);
-        } else {
-            success = false;
-            showToast(getString(mUpdateFolder.exists() ?
-                    R.string.delete_updates_failure_message :
-                    R.string.delete_updates_noFolder_message), Toast.LENGTH_SHORT);
-        }
-        return success;
-    }
-
     @Override
     public void onStartUpdate(UpdatePreference pref) {
         final UpdateInfo updateInfo = pref.getUpdateInfo();
@@ -937,9 +904,6 @@ public class UpdaterActivity extends PreferenceActivity implements
             case R.id.menu_local_changelog:
                 showLocalChangelog();
                 break;
-            case R.id.menu_delete_all:
-                if (isCheckingForUpdatesAllowed()){ confirmDeleteAll(); }
-                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -963,6 +927,7 @@ public class UpdaterActivity extends PreferenceActivity implements
     private static class updateTask extends AsyncTask<Void, Void, Boolean> {
         private final WeakReference<UpdaterActivity> mActivityRef;
         private final UpdateInfo mUpdateInfo;
+        private File updateFile;
 
         updateTask(UpdaterActivity activity, UpdateInfo updateInfo) {
             mUpdateInfo = updateInfo;
@@ -975,7 +940,7 @@ public class UpdaterActivity extends PreferenceActivity implements
                 Thread.sleep(1000);
             } catch (InterruptedException ignored) {
             }
-            File updateFile = new File(Utils.makeUpdateFolder().getPath() + "/" + mUpdateInfo.getFileName());
+            updateFile = new File(Utils.makeUpdateFolder().getPath() + "/" + mUpdateInfo.getFileName());
             return MD5.checkMD5(mUpdateInfo.getMD5(), updateFile);
         }
 
@@ -989,28 +954,21 @@ public class UpdaterActivity extends PreferenceActivity implements
                 if (result) {
                     if (Utils.isABDevice()) {
                        mActivityRef.get().showToast(mActivityRef.get().getString(R.string.update_manual_ab), Toast.LENGTH_LONG);
+                       mActivityRef.get().mStartUpdateVisible = false;
                     } else {
                        mActivityRef.get().showInstallDialog(mUpdateInfo);
                     }
                 } else {
-
+                    try{
+                        updateFile.delete();
+                    }catch(Exception e){
+                    }
+                    mActivityRef.get().updateLayout(false);
                     new AlertDialog.Builder(mActivityRef.get())
-                            .setTitle(R.string.md5_failed_dialog_title)
-                            .setMessage(mActivityRef.get().getString(R.string.md5_failed_dialog_message))
+                            .setMessage(mActivityRef.get().getString(R.string.md5_verification_failed))
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    if (Utils.isABDevice()) {
-                                       mActivityRef.get().showToast(mActivityRef.get().getString(R.string.update_manual_ab), Toast.LENGTH_LONG);
-                                    } else {
-                                       mActivityRef.get().showInstallDialog(mUpdateInfo);
-                                    }
-                                }
-                            })
-                            .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Do nothing and allow the dialog to be dismissed
                                 }
                             })
                             .setOnDismissListener(new DialogInterface.OnDismissListener() {

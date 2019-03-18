@@ -14,9 +14,10 @@ import android.app.AlarmManager;
 
 public class Constants {
     // Download related
-    public static final String UPDATES_FOLDER = "PixelExperience-Silent-Updates";
+    public static final String UPDATES_FOLDER = "PixelExperience-go-Updates";
     public static final String DOWNLOAD_ID = "download_id";
     public static final String DOWNLOAD_NAME = "download_name";
+    public static final String DOWNLOAD_MD5 = "download_md5";
     public static final String DOWNLOAD_TMP_EXT = ".tmp";
     public static final String DOWNLOAD_CHANNEL_ID = "org.pixelexperience.ota.DOWNLOAD_CHANNEL";
     public static final String DOWNLOADING_CHANNEL_ID = "org.pixelexperience.ota.DOWNLOADING_CHANNEL";
@@ -31,12 +32,11 @@ public class Constants {
     public static final long UPDATE_DEFAULT_FREQ = AlarmManager.INTERVAL_HALF_DAY;
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "org.pixelexperience.device";
-    public static final String CURRENT_VERSION = "org.pixelexperience.version";
+    public static final String CURRENT_BUILD_DATE = "org.pixelexperience.build_date";
     public static final String OTA_URL = "http://pe-go.ru/ota/silent27/pe/%s";
     public static final String OTA_VERSION_CODE = "org.pixelexperience.ota.version_code";
     // Expressions
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd-Hm";
-    public static final String PATTERN_FILENAME_DATE_FORMAT = "(\\d{4}\\d{2}\\d{2}-\\d{2}\\d{2})";
     // Default wipe options
     public static final boolean DELETE_AFTER_INSTALL_DEFAULT = false;
     public static final boolean WIPE_CACHE_BY_DEFAULT = true;
