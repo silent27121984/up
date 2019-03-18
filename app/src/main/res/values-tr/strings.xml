@@ -29,7 +29,7 @@
     <!-- Info section -->
     <string name="extras_category_title">Ekstralar</string>
     <string name="error_open_url">URL\'yi tarayıcıda açılamadı</string>
-    <string name="developer_info_title">Ekstralar/string>
+    <string name="developer_info_title">Ekstralar</string>
     <string name="donate_info_title">Proje Yardımı</string>
     <string name="donate_info_summary">"Git" sürümünün geliştirilmesini destekleyin</string>
     <string name="website_info_title">İnternet sitesi</string>
